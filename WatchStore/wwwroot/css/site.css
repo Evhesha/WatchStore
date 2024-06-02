@@ -20,3 +20,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/*Carousel*/
+.my-carousel .carousel-item {
+    max-height:700px;
+}
+/*-Carousel*/

@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\WatchStore.bundle.scp.css"
     },
     {
+      "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\Images\\ElWatches.jpg",
+      "PackagePath": "staticwebassets\\Images\\ElWatches.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\Images\\MechWatches.jpg",
+      "PackagePath": "staticwebassets\\Images\\MechWatches.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\Images\\Watches.jpg",
+      "PackagePath": "staticwebassets\\Images\\Watches.jpg"
+    },
+    {
       "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
