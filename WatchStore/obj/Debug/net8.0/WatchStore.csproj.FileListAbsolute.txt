@@ -28,3 +28,4 @@ D:\Visual Studio\projects\c#\WatchStore\WatchStore\obj\Debug\net8.0\refint\Watch
 D:\Visual Studio\projects\c#\WatchStore\WatchStore\obj\Debug\net8.0\WatchStore.pdb
 D:\Visual Studio\projects\c#\WatchStore\WatchStore\obj\Debug\net8.0\WatchStore.genruntimeconfig.cache
 D:\Visual Studio\projects\c#\WatchStore\WatchStore\obj\Debug\net8.0\ref\WatchStore.dll
+D:\Visual Studio\projects\c#\WatchStore\WatchStore\obj\Debug\net8.0\WatchStore.sourcelink.json
