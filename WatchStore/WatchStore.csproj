@@ -7,9 +7,4 @@
     <ApplicationIcon>wwwroot\favicon.ico</ApplicationIcon>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Data\Mocks\" />
-  </ItemGroup>
-
 </Project>

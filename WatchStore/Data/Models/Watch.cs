@@ -10,7 +10,7 @@
         public ushort Price { get; set; }
         public bool IsFavorite { get; set; }
         public int CategoryId { get; set; }
-        public int Available { get; set; }
+        public bool Available { get; set; }
         public virtual Category Category { get; set; }
     }
 }

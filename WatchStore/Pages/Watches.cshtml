@@ -1,5 +1,12 @@
 ﻿@page
 @model WatchStore.Pages.WatchesModel
+@using Data.Mocks;
+
 @{
-    ViewData["Title"] = "Watches";
+    MockWatches mock = new MockWatches();
+}
+
+@foreach (var watch in mock.Watches)
+{
+
 }
