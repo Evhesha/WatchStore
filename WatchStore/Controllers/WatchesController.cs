@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WatchStore.Data.Interfaces;
-using WatchStore.Data.Mocks;
+using WatchStore.Data.Models;
 
 namespace WatchStore.Controllers
 {
     public class WatchesController : Controller
     {
-        private readonly MockWatches _watches;
+        private readonly IWatches _watches;
         private readonly IWatchesCategory _categories;
 
-        public WatchesController(MockWatches watches, IWatchesCategory categories)
+        public WatchesController(IWatches watches, IWatchesCategory categories)
         {
             _watches = watches;
             _categories = categories;
@@ -17,7 +17,7 @@ namespace WatchStore.Controllers
 
         public ViewResult Watches()
         {
-            var watches = _watches.Watches.ToList(); // Преобразование в List<Watch>
+            var watches = _watches.Watches.ToList();
             return View(watches);
         }
     }

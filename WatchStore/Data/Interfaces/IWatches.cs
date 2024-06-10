@@ -5,7 +5,7 @@ namespace WatchStore.Data.Interfaces
     public interface IWatches
     {
         IEnumerable<Watch> Watches { get; } 
-        IEnumerable<Watch> GetFavWatches {  get; set; }
+        IEnumerable<Watch> GetFavWatches {  get; }
         Watch GetObjectWatch(int id);
     }
 }
