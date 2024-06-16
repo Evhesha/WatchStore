@@ -1,4 +1,3 @@
-using System.Data.Entity;
 using WatchStore.Data;
 using WatchStore.Data.Interfaces;
 using WatchStore.Data.Mocks;
@@ -7,6 +6,9 @@ using WatchStore.Data.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Добавляем dbsettings.json в конфигурацию
+builder.Configuration.AddJsonFile("dbsettings.json", optional: true, reloadOnChange: true);
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 
@@ -14,12 +16,11 @@ builder.Services.AddRazorPages();
 string connection = builder.Configuration.GetConnectionString("DefaultConnection");
 
 // добавляем контекст ApplicationContext в качестве сервиса в приложение
-//builder.Services.AddDbContext<AppDBContent>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<AppDBContent>(options => options.UseSqlServer(connection));
 
 // Связываем класс и его интерфейс
-builder.Services.AddSingleton<IWatches, MockWatches>();
-builder.Services.AddSingleton<IWatchesCategory, MockCategory>();
-builder.Services.AddMvc();
+builder.Services.AddTransient<IWatches, WatchesRepository>();
+builder.Services.AddTransient<IWatchesCategory, CategoryRepository>();
 
 var app = builder.Build();
 

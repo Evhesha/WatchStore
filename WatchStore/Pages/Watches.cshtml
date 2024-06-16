@@ -1,21 +1,23 @@
 ﻿@page
+@using Data;
 @model WatchStore.Pages.WatchesModel
-@using Data.Mocks;
+@inject AppDBContent DbContext
 
 @{
-    MockWatches mockWatches = new MockWatches();
+    DBObjects.Initial(DbContext); // Инициализируем базу данных
+    var watches = DbContext.Watch.ToList(); // Получаем список часов из базы данных
 }
 
 <div class="row">
-    @foreach (var watch in mockWatches.Watches)
+    @foreach (var watch in watches)
     {
         <div class="col-sm-4 mb-4">
             <div class="card h-100">
                 <img src="@watch.Img" class="card-img-top" alt="@watch.Name">
                 <div class="card-body">
                     <h5 class="card-title">@watch.Name</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <p class="card-text">@watch.ShortDescription</p> <!-- Добавил короткое описание -->
+                    <a href="#" class="btn btn-primary">Подробнее</a> <!-- Изменил текст кнопки -->
                 </div>
             </div>
         </div>
