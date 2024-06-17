@@ -1,5 +1,5 @@
 ﻿@page
-@using Data;
+@using WatchStore.Data
 @model WatchStore.Pages.WatchesModel
 @inject AppDBContent DbContext
 
@@ -8,18 +8,29 @@
     var watches = DbContext.Watch.ToList(); // Получаем список часов из базы данных
 }
 
-<div class="row">
-    @foreach (var watch in watches)
-    {
-        <div class="col-sm-4 mb-4">
-            <div class="card h-100">
-                <img src="@watch.Img" class="card-img-top" alt="@watch.Name">
-                <div class="card-body">
-                    <h5 class="card-title">@watch.Name</h5>
-                    <p class="card-text">@watch.ShortDescription</p> <!-- Добавил короткое описание -->
-                    <a href="#" class="btn btn-primary">Подробнее</a> <!-- Изменил текст кнопки -->
-                </div>
+<div>
+    <form method="post" asp-page-handler="Filter">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <select class="form-select" name="Category" aria-label="Категории">
+                    <option value="All">Все</option>
+                    <option value="Mechanical">Механические</option>
+                    <option value="Electronic">Электронные</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" placeholder="From" aria-label="From" name="From">
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" placeholder="To" aria-label="To" name="To">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-outline-primary">Отфильтровать</button>
             </div>
         </div>
-    }
+    </form>
+    <p></p>
+    <div class="row">
+        @Model.DisplayWatches(watches)
+    </div>
 </div>

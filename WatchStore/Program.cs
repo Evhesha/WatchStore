@@ -1,6 +1,5 @@
 using WatchStore.Data;
 using WatchStore.Data.Interfaces;
-using WatchStore.Data.Mocks;
 using Microsoft.EntityFrameworkCore;
 using WatchStore.Data.Repository;
 
@@ -12,11 +11,9 @@ builder.Configuration.AddJsonFile("dbsettings.json", optional: true, reloadOnCha
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-// получаем строку подключения из файла конфигурации
-string connection = builder.Configuration.GetConnectionString("DefaultConnection");
-
 // добавляем контекст ApplicationContext в качестве сервиса в приложение
-builder.Services.AddDbContext<AppDBContent>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<AppDBContent>(options => options.
+        UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Связываем класс и его интерфейс
 builder.Services.AddTransient<IWatches, WatchesRepository>();

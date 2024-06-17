@@ -36,13 +36,13 @@ namespace WatchStore.Data
                         IsFavorite = true,
                         Available = true,
                         Category = Categories["Механические часы"]
-                    }); ;
+                    });
             }
 
             content.SaveChanges();
         }
 
-        private static Dictionary<string, Category> _category;
+        private static Dictionary<string, Category>? _category;
 
         public static Dictionary<string, Category> Categories {
             get
@@ -66,6 +66,5 @@ namespace WatchStore.Data
                 return _category;
             }
         }
-
     }
 }

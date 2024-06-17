@@ -18,20 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Visual Studio\projects\c#\WatchStore\WatchStore
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Visual Studio/projects/c\#/WatchStore/WatchStore/Pages/ElWatches.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWxXYXRjaGVzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Visual Studio/projects/c\#/WatchStore/WatchStore/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio/projects/c\#/WatchStore/WatchStore/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Visual Studio/projects/c\#/WatchStore/WatchStore/Pages/MechWatches.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVjaFdhdGNoZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Visual Studio/projects/c\#/WatchStore/WatchStore/Pages/Privacy.cshtml]
