@@ -9,20 +9,20 @@ namespace WatchStore.Pages
     public class WatchesModel : PageModel
     {
         [BindProperty]
-        public string Category { get; set; } // For dropdown selection
+        public string Category { get; set; } = "All";
 
         [BindProperty]
-        public string State { get; set; } // For state input field
+        public string From { get; set; }
 
         [BindProperty]
-        public string Zip { get; set; } // For zip input field
+        public string To { get; set; }
 
         public AppDBContent DbContext { get; set; }
 
         public WatchesModel(AppDBContent dbContext)
         {
             DbContext = dbContext;
-        }
+        } 
 
         public void OnGet() { }
 
@@ -63,7 +63,8 @@ namespace WatchStore.Pages
 
             foreach (var watch in watches)
             {
-                htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
+                if (watch.CategoryId == 1)
+                    htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
             }
 
             return htmlContentBuilder;
@@ -75,7 +76,8 @@ namespace WatchStore.Pages
 
             foreach (var watch in watches)
             {
-                htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
+                if (watch.CategoryId == 2)
+                    htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
             }
 
             return htmlContentBuilder;

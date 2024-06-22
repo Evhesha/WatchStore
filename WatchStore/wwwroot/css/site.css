@@ -21,8 +21,15 @@ body {
   margin-bottom: 60px;
 }
 
+/*Others*/
+.index-item:hover, .watches-item:hover, .privacy-item:hover {
+    color: black;
+    text-decoration: overline;
+}
+/*Others*/
+
 /*Carousel*/
 .my-carousel .carousel-item {
-    max-height:700px;
+    max-height: 700px;
 }
 /*-Carousel*/

@@ -13,9 +13,9 @@
         <div class="row g-3 align-items-center">
             <div class="col-auto">
                 <select class="form-select" name="Category" aria-label="Категории">
-                    <option value="All">Все</option>
-                    <option value="Mechanical">Механические</option>
-                    <option value="Electronic">Электронные</option>
+                    <option value="All">All</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Electronic">Electronic</option>
                 </select>
             </div>
             <div class="col-auto">
@@ -31,6 +31,17 @@
     </form>
     <p></p>
     <div class="row">
-        @Model.DisplayWatches(watches)
+        @if (Model.Category == "All")
+        {
+            @Model.DisplayWatches(watches)
+        }
+        else if (Model.Category == "Mechanical")
+        {
+            @Model.DisplayMechanicalWatches(watches)
+        }
+        else if (Model.Category == "Electronic")
+        {
+            @Model.DisplayElectronicWatches(watches)
+        }
     </div>
 </div>

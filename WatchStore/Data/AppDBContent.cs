@@ -10,10 +10,13 @@ namespace WatchStore.Data
         // EFCore.Tools добавили для работы с миграциями чтобы можно было создать БД на основе наших классов
         public AppDBContent(DbContextOptions<AppDBContent> options) : base(options) { }
 
-        // Для уставновления товаров 
+        // Для уставновления таблицы товаров 
         public DbSet<Watch> Watch { get; set; }
 
-        // Для установления категорий
+        // Для установления таблицы категорий
         public DbSet<Category> Category { get; set; }  
+
+        // Для установления таблицы элементов корзины
+        public DbSet<StoreCartItem> StoreCartItem { get; set; }
     }
 }
