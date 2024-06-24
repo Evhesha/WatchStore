@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\Images\\Watches.jpg"
     },
     {
+      "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\Images\\watchesForFirstFeature.jpg",
+      "PackagePath": "staticwebassets\\Images\\watchesForFirstFeature.jpg"
+    },
+    {
+      "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\Images\\watchesForSecondFeature.jpg",
+      "PackagePath": "staticwebassets\\Images\\watchesForSecondFeature.jpg"
+    },
+    {
       "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

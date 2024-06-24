@@ -30,6 +30,7 @@ body {
 
 /*Carousel*/
 .my-carousel .carousel-item {
+    padding: 0;
     max-height: 700px;
 }
 /*-Carousel*/

@@ -37,7 +37,9 @@ namespace WatchStore.Pages
                     <div class='card-body'>
                         <h5 class='card-title'>{watch.Name}</h5>
                         <p class='card-text'>{watch.ShortDescription}</p>
-                        <a href='#' class='btn btn-primary'>Подробнее</a>
+                        <p class='card-text'>{watch.Price}$</p>
+                        <a href='#' class='btn btn-outline-primary'>More Details</a>
+                        <a href='#' class='btn btn-outline-success'>Add to cart</a>
                     </div>
                 </div>
             </div>");
@@ -45,13 +47,30 @@ namespace WatchStore.Pages
             return htmlContentBuilder;
         }
 
+        private bool IsWithinPriceRange(decimal price)
+        {
+            if (string.IsNullOrEmpty(From) && string.IsNullOrEmpty(To))
+            {
+                return true;
+            }
+
+            decimal fromPrice = string.IsNullOrEmpty(From) ? decimal.MinValue : Convert.ToDecimal(From);
+            decimal toPrice = string.IsNullOrEmpty(To) ? decimal.MaxValue : Convert.ToDecimal(To);
+
+            return price >= fromPrice && price <= toPrice;
+        }
+    
+
         public IHtmlContent DisplayWatches(List<Watch> watches)
         {
             var htmlContentBuilder = new HtmlContentBuilder();
 
             foreach (var watch in watches)
             {
-                htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
+                if (IsWithinPriceRange(watch.Price))
+                {
+                    htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
+                }
             }
 
             return htmlContentBuilder;
@@ -63,8 +82,10 @@ namespace WatchStore.Pages
 
             foreach (var watch in watches)
             {
-                if (watch.CategoryId == 1)
+                if (watch.CategoryId == 1 && IsWithinPriceRange(watch.Price))
+                {
                     htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
+                }
             }
 
             return htmlContentBuilder;
@@ -76,8 +97,10 @@ namespace WatchStore.Pages
 
             foreach (var watch in watches)
             {
-                if (watch.CategoryId == 2)
+                if (watch.CategoryId == 2 && IsWithinPriceRange(watch.Price))
+                {
                     htmlContentBuilder.AppendHtml(DisplayWatchCard(watch));
+                }
             }
 
             return htmlContentBuilder;
