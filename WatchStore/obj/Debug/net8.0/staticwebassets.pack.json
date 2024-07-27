@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\Images\\watchesForSecondFeature.jpg"
     },
     {
+      "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\Images\\watchesForThirdFeature.png",
+      "PackagePath": "staticwebassets\\Images\\watchesForThirdFeature.png"
+    },
+    {
       "Id": "D:\\Visual Studio\\projects\\c#\\WatchStore\\WatchStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

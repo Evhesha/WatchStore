@@ -2,6 +2,7 @@ using WatchStore.Data;
 using WatchStore.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using WatchStore.Data.Repository;
+using WatchStore.Data.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,11 @@ builder.Services.AddDbContext<AppDBContent>(options => options.
 builder.Services.AddTransient<IWatches, WatchesRepository>();
 builder.Services.AddTransient<IWatchesCategory, CategoryRepository>();
 
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped(sp => StoreCart.GetCart(sp));
+builder.Services.AddMemoryCache();
+builder.Services.AddSession();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,6 +41,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapRazorPages();
 

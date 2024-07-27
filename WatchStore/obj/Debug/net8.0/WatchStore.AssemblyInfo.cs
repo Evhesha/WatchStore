@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WatchStore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3726d86ba6d0dfa817ae7b9a226397e497bc44e0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+46f59f7d1ae0dd8699aa56ca6bb393bc27c6fea1")]
 [assembly: System.Reflection.AssemblyProductAttribute("WatchStore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WatchStore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
