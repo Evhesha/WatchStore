@@ -1,0 +1,51 @@
+﻿@page
+@using WatchStore.Data
+@model WatchStore.Pages.WatchesModel
+@inject AppDBContent DbContext
+
+@{
+    DBObjects.Initial(DbContext); // Инициализируем базу данных
+    var watches = DbContext.Watch.ToList(); // Получаем список часов из базы данных
+}
+
+<div>
+    <p></p>
+    <form method="post" asp-page-handler="Filter">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <select class="form-select" name="Category" aria-label="Категории">
+                    <option value="All">All</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Electronic">Electronic</option>
+                </select>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" placeholder="From" aria-label="From" name="From">
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" placeholder="To" aria-label="To" name="To">
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-outline-primary">Filter out</button>
+            </div>
+            <div class="col-auto">
+                <a asp-area="" asp-page="/AddWatches" class="btn btn-outline-primary"><i class="bi bi-plus-circle"></i> Add watches</a>
+            </div>
+        </div>
+    </form>
+    <p></p>
+    <div class="row">
+        @if (Model.Category == "All")
+        {
+            @Model.DisplayWatches(watches)
+        }
+        else if (Model.Category == "Mechanical")
+        {
+            @Model.DisplayMechanicalWatches(watches)
+        }
+        else if (Model.Category == "Electronic")
+        {
+            @Model.DisplayElectronicWatches(watches)
+        }
+    </div>
+</div>

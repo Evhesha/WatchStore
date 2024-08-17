@@ -1,0 +1,101 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- START THE CAUROUSEL-->
+
+<div class="container-fluid my-carousel">
+    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Images/Watches.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Измените ваш образ</h5>
+                    <p>Подберите под себя ваши часы</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/ElWatches.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Электронные часы</h5>
+                    <p>По предположеням здесь кнопка</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="Images/MechWatches.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Механические часы</h5>
+                    <p>По предположеням здесь кнопка</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- /END THE CAUROUSEL-->
+<!-- START THE FEATURES -->
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">The Timeless Legacy of Watches. <span class="text-body-secondary">A Journey Through History.</span></h2>
+        <p class="lead">Watches have been more than mere timekeeping devices; they embody a rich tapestry of human culture and craftsmanship. From the earliest sundials to today's smartwatches, these wrist companions have left an indelible mark on our lives.</p>
+        <p class="lead">Imagine ancient civilizations relying on sundials to mark the passage of hours. As technology evolved, mechanical watches emerged, intricate marvels of gears and springs. They graced the wrists of nobles, adventurers, and explorers, their ticking symphony echoing through centuries.</p>
+        <p class="lead">In the 20th century, wristwatches became symbols of status and elegance. Swiss watchmakers crafted masterpieces, each movement a testament to precision. The ticking of a Rolex or Patek Philippe became synonymous with luxury.</p>
+        <p class="lead">Fast forward to today, where smartwatches blend tradition with innovation. These tiny screens on our wrists track our steps, monitor our heart rates, and deliver notifications. They connect us to the digital world while honoring horological heritage.</p>
+        <p class="lead">Whether it's a vintage mechanical watch passed down through generations or a futuristic smartwatch syncing with our calendars, watches remain timeless companions. They remind us that every second counts, and life's moments are fleeting.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="~/Images/watchesForFirstFeature.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="Vintage Watch">
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">The Timeless Legacy of Mechanical Watches. <span class="text-body-secondary">A Symphony of Gears and Springs.</span></h2>
+        <p class="lead">Mechanical watches, those intricate marvels of craftsmanship, have graced wrists for centuries. Their heartbeat is not a battery-powered quartz crystal but the rhythmic dance of gears, levers, and escapements.</p>
+        <p class="lead">Imagine a master watchmaker hunched over a workbench, assembling tiny components with precision. Each movement, whether hand-wound or automatic, tells a story of dedication and artistry.</p>
+        <p class="lead">Today, mechanical watches remain symbols of elegance. Swiss watchmakers continue their legacy, crafting movements with jewel-like precision. The sweep of a seconds hand across a guilloché dial is a celebration of time itself.</p>
+        <p class="lead">So next time you glance at your wrist, remember that beneath the polished case lies a miniature symphony—a mechanical marvel that transcends mere timekeeping.</p>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img src="~/Images/watchesForSecondFeature.jpg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="Mechanical Watch">
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">The Digital Revolution: Electronic Watches. <span class="text-body-secondary">A Fusion of Technology and Style.</span></h2>
+        <p class="lead">Electronic watches, born in the latter half of the 20th century, transformed timekeeping. No longer reliant on intricate gears, they embraced transistors, LCDs, and microprocessors.</p>
+        <p class="lead">As technology advanced, so did electronic watches. LED displays gave way to colorful LCD screens. Features multiplied: chronographs, alarms, world time, and even calculators.</p>
+        <p class="lead">Today's smartwatches continue this legacy. They sync with our smartphones, track our steps, and monitor our health. Notifications buzz discreetly on our wrists, keeping us connected.</p>
+        <p class="lead">Whether it's an Apple Watch, a Fitbit, or a stylish hybrid smartwatch, these electronic marvels blend functionality with fashion. They're more than timekeepers; they're personal assistants.</p>
+    </div>
+    <div class="col-md-5">
+        <img src="~/Images/watchesForThirdFeature.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt="Electronic Watch">
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<!-- /END THE FEATURES -->

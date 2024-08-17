@@ -1,0 +1,34 @@
+﻿@page
+@model Data.Models.Watch
+@{
+    <form method="post">
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary">Add watches</h2>
+                <hr />
+            </div>
+            <div class="mb-3">
+                <label>Watches name</label>
+                <input asp-for="Name" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label>Short description</label>
+                <input asp-for="ShortDescription" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label>Full description</label>
+                <input asp-for="Description" type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label>Photo of watches</label>
+                <input asp-for="Img" class="form-control" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label>Price</label>
+                <input asp-for="Price" type="text" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+            <a asp-page="/Watches" class="btn btn-secondary">Back to list</a>
+        </div>
+    </form>
+}
